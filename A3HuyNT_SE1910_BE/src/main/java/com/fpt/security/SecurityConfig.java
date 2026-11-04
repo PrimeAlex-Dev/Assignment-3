@@ -48,6 +48,8 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/api/rooms/**").hasRole("STAFF")
                         .requestMatchers(HttpMethod.PUT, "/api/rooms/**").hasRole("STAFF")
                         .requestMatchers(HttpMethod.DELETE, "/api/rooms/**").hasRole("STAFF")
+                        .requestMatchers(HttpMethod.POST, "/api/room-types/**").hasRole("STAFF")
+                        .requestMatchers(HttpMethod.PUT, "/api/room-types/**").hasRole("STAFF")
                         .requestMatchers("/api/staff/**").hasRole("STAFF")
 
                         // 4. Các request còn lại yêu cầu phải đăng nhập

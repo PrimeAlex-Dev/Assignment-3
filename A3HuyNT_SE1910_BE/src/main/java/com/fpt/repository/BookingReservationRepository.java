@@ -11,4 +11,7 @@ public interface BookingReservationRepository extends JpaRepository<BookingReser
 
     // Lấy lịch sử đặt phòng của một khách hàng
     List<BookingReservation> findByCustomer_CustomerIDOrderByBookingDateDesc(Integer customerID);
+
+    // Kiểm tra xem khách hàng đã từng có đơn đặt phòng nào chưa
+    boolean existsByCustomer_CustomerID(Integer customerID);
 }
